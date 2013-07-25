@@ -193,7 +193,7 @@
             Currently, there is no simple REPL tool for Infrastructure-as-Code solutions. A tool that would let you to understand instantly changes in your infrastructure after running your code. We believe that the text log is not enough.
           </p>
           <p>
-            In our project, we want to fill this gap with <strong>Serpent</strong>. We build a REPL tool for <a href="http://www.opscode.com/chef/">chef</a>. The tool will visualize how provisioned machines changes after applying your code. With the rewind function, you can step-back and more-forward in your code and you see immediately changing state of your machine. Similar to other REPL tools, you can apply fragments of your code.
+            In our project, we want to fill this gap with <strong>Serpent</strong>. We build a REPL tool for <a href="http://www.opscode.com/chef/">chef</a>. The tool will visualize how provisioned machines changes after applying your code. Serpent provides <strong>near-instant feedback</strong>. With the <strong>rewind functionality</strong>, you can step-back and more-forward in your code and you see immediately changing state of your machine. Similar to other REPL tools, you can apply fragments of your code.
           </p>
         </div>
       </div>
@@ -201,10 +201,10 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            We will implement the tool as an add-on for Sublime2. The tool will be open-sourced (<a href="http://en.wikipedia.org/wiki/Gpl">GPL</a>). The first version will support chef. Initially, we support single machine provisioning, next we will on supporting you in developing mutli-node setups.
+            We will implement the tool as an add-on for Sublime2. The tool will be open-sourced (<a href="http://en.wikipedia.org/wiki/Gpl">GPL</a>). The first version will support chef. Initially, we will support a single-machine provisioning, next we will focus on supporting you in developing mutli-node environments.
           </p>
           <p>
-            Later, we will support larger variety of editors and configuration management platforms.
+            Later, we will work on plugins for other editors and configuration management platforms.
           </p>
         </div>
         <div class="span5 asset">
@@ -221,12 +221,12 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    Do you plan to extend REPL4Chef to other configuration management platforms?
+                    Do you plan to extend Serpent to other configuration management platforms?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Yes. We start with Chef, because we have been working with it in for last years. It is a big challenge to make the REPL4Chef fast and responsive.
+                    Yes. We start with Chef, because we have been working with this technology in for last years. It is a big challenge to make the Serpent fast and responsive. So, we prefer to work with well-known technology. We will support more platforms in future.
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    The tool will run in background VMs inside containers, AWS, or Openstack. The REPL4Chef will run one or more VMs to make the tool react fast on changes. When running multiple VMs, each VM will contain different state of the provisioned machine. 
+                    The Serpent will run in background multiple VMs. The VMs can be LXC containers or virtual machines in AWS or Openstack. The Serpent will run one or more VMs to make the tool react fast on any code changes. Each VM will contain different state of the provisioned machine. 
                   </div>
                 </div>
               </div>
@@ -254,7 +254,7 @@
                 </div>
                 <div id="collapseThree" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    The REPL4Chef is essential piece for new type of environment building tool. The tool will deliver an interactive way of building your infrastructure and short interaction cycles in the infrastructure development. 
+                    The Serpent is an essential piece for new type of environment building tool. The tool will deliver an interactive way of building your infrastructure with near-instant feedback. 
                   </div>
                 </div>
               </div>
