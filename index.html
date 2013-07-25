@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>REPL for Infrastructure as Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -109,7 +109,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Bitstarter</a>
+            <a class="brand" href="#">REPL4Chef</a>
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
@@ -124,13 +124,13 @@
   <div class="container">      
     <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>REPL4Chef</h1>
         </div> 
     </div>
 
     <div class="row-fluid subheading">
       <div class="span12">
-          <p class="lead"> 1 sent description.</p>
+          <p class="lead">Visualize impact of your infrastructure code as you go.</p>
       </div>
     </div>
 
@@ -151,7 +151,7 @@
          
             <div class="span4">
               <div class="linediv-c">
-                <h3>$6000</h3> <p>of $10,000</p>
+                <h3>$6000</h3> <p>of $200,000</p>
               </div>
             </div>
 
@@ -189,17 +189,10 @@
         </div>
         <div class="span5 copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            Currently, there is no simple REPL tool for Infrastructure-as-Code solutions. A tool that would let you to understand instantly changes in your infrastructure after running your code. We believe that the text log is not enough.
+          </p>
+          <p>
+            In our project, we want to fill this gap. We build a REPL tool for <a href="http://www.opscode.com/chef/">chef</a>. The tool will visualize how provisioned machines changes after applying your code. With the rewind function, you can step-back and more-forward in your code and you see immediately changing state of your machine. Similar to other REPL tools, you can apply fragments of your code.
           </p>
         </div>
       </div>
@@ -207,17 +200,10 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            We will realize the tool as an add-on for Sublime2. The tool will be open-sources (GPL). The first version will support chef. Initially, we will focus on single machine provisioning, next we will work on mutli-node setup.
+          </p>
+          <p>
+            If the REPL4Chef success, we will support larger variety of editors and configuration management platforms.
           </p>
         </div>
         <div class="span5 asset">
@@ -234,28 +220,44 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
+                    Do you plan to extend REPL4Chef to other configuration management platforms?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
+                    Yes. I start with Chef, because we have been working with it in for last years. The challenging part is to make the tool very fast and responsive.
                   </div>
                 </div>
               </div>
+
               <div class="accordion-group">
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
+                    How the tool will evaluate the chef code?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    A question which is commonly asked by users.
+                    The tool will run in background VMs inside containers, AWS or Openstack. The REPL4Chef will run 1 or more VMs to make the tool react fast on changes. When running multiple VMs, each VM will run provisioned VM on different stages of provisioning.
                   </div>
                 </div>
               </div>
+
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseThree">
+                    What is the big picture?
+                  </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                    The REPL4Chef is essential piece for new type of environment building tool. The tool will deliver an interactive way of building your infrastructure and short interaction cycles in the infrastructure development. 
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
